@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Waste Recycling Guide | San Diego County Electronics Disposal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0057b8;
+            --primary-light: #4d94ff;
+            --secondary: #00a86b;
+            --accent: #ff6600;
+            --dark: #1a3a5f;
+            --light: #f0f8ff;
+            --gray: #6c757d;
+            --gray-light: #e9ecef;
+            --danger: #e74c3c;
+            --success: #2ecc71;
+            --border-radius: 10px;
+            --box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 1.8rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo i {
+            color: #ffd700;
+            animation: gentle-circuit 4s infinite ease-in-out;
+        }
+
+        @keyframes gentle-circuit {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 6px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffd700;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0, 87, 184, 0.85), rgba(26, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .san-diego-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: -2rem auto 3rem;
+            max-width: 1000px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .main-article {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            box-shadow: var(--box-shadow);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Typography */
+        h2 {
+            font-family: 'Roboto Condensed', sans-serif;
+            color: var(--primary);
+            margin: 2.5rem 0 1.2rem;
+            padding-bottom: 0.7rem;
+            border-bottom: 2px solid var(--gray-light);
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--dark);
+            margin: 1.8rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.08rem;
+            color: #444;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.8rem;
+        }
+
+        li {
+            margin-bottom: 0.7rem;
+            padding-left: 0.5rem;
+        }
+
+        /* Law Section */
+        .law-section {
+            background: linear-gradient(135deg, #e8f4f8, #d4e7ec);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border-left: 6px solid var(--primary);
+        }
+
+        .law-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.2rem;
+            color: var(--primary);
+        }
+
+        /* Illegal Alert */
+        .illegal-alert {
+            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 6px solid var(--danger);
+        }
+
+        .illegal-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1rem;
+            color: var(--danger);
+        }
+
+        /* Drop-off Locations */
+        .location-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .location-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border-top: 5px solid var(--secondary);
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+
+        .location-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-icon {
+            font-size: 2rem;
+            color: white;
+            background: var(--secondary);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .location-title {
+            font-family: 'Roboto Condensed', sans-serif;
+            color: var(--dark);
+            font-size: 1.3rem;
+            margin: 0;
+        }
+
+        .location-details {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 0.8rem;
+        }
+
+        .detail-icon {
+            color: var(--primary);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        /* Recycling Process */
+        .process-section {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            border-left: 6px solid var(--success);
+        }
+
+        .process-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.2rem;
+            color: var(--success);
+        }
+
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--success);
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Accepted Items */
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .item-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .item-card:hover {
+            border-color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        .item-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .item-name {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        /* Service Note */
+        .service-note {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 6px solid var(--accent);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        /* Resources */
+        .resources {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+        }
+
+        .resource-list {
+            list-style: none;
+            margin: 1.5rem 0 0 0;
+        }
+
+        .resource-list li {
+            margin-bottom: 1.5rem;
+            padding: 1.2rem;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .resource-list li:hover {
+            background: #edf2f7;
+            transform: translateX(5px);
+        }
+
+        .resource-list a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+        }
+
+        .resource-list a:hover {
+            color: var(--primary-light);
+        }
+
+        .resource-icon {
+            font-size: 1.3rem;
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3.5rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-column h4 {
+            font-family: 'Roboto Condensed', sans-serif;
+            margin-bottom: 1.5rem;
+            color: #ffd700;
+            font-size: 1.3rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stats-bar {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+            
+            .location-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+            
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            nav a {
+                margin: 0;
+            }
+            
+            .hero {
+                padding: 3rem 0;
+            }
+            
+            .main-article {
+                padding: 2rem;
+            }
+            
+            .items-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-microchip"></i>
+                <span>SD E-Waste Guide</span>
+            </div>
+            <nav>
+                <a href="#laws">California Laws</a>
+                <a href="#locations">Drop-off Locations</a>
+                <a href="#process">Recycling Process</a>
+                <a href="#items">Accepted Items</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>E-Waste Recycling in San Diego County</h1>
+            <p>A Complete Guide to Drop-Off Locations & Laws</p>
+            <div class="san-diego-badge">
+                <i class="fas fa-map-marker-alt"></i> Definitive Local Resource for El Cajon & San Diego County
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">25M</div>
+                <div class="stat-label">Pounds of E-Waste Recycled Annually in SD County</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">$2,500</div>
+                <div class="stat-label">Maximum Fine for Illegal Disposal</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">60+</div>
+                <div class="stat-label">Certified Drop-off Locations</div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <main class="main-article">
+                <section id="introduction">
+                    <p>San Diego County generates over 100 million pounds of electronic waste annually, making proper disposal not just an environmental concern but a legal requirement under California law. This definitive guide provides El Cajon and San Diego County residents with complete information on e-waste recycling laws, certified drop-off locations, and what happens to your electronics after you responsibly recycle them. Understanding these regulations helps protect our environment, conserve valuable resources, and avoid significant fines for improper disposal.</p>
+                </section>
+
+                <section id="laws">
+                    <h2>The California Electronic Waste Recycling Act</h2>
+                    
+                    <div class="law-section">
+                        <div class="law-header">
+                            <i class="fas fa-gavel"></i>
+                            <h3>Key Provisions of California's E-Waste Law</h3>
+                        </div>
+                        <p>Enacted in 2003 and updated regularly, the California Electronic Waste Recycling Act (SB 20/SB 50) establishes one of the nation's most comprehensive e-waste recycling programs:</p>
+                        <ul>
+                            <li><strong>Universal Waste Rule:</strong> Classifies most consumer electronics as "universal waste," banning them from landfills</li>
+                            <li><strong>Advanced Recycling Fee:</strong> Consumers pay a fee at purchase that funds recycling programs (visible on receipts as "CA Electronic Waste Recycling Fee")</li>
+                            <li><strong>Manufacturer Responsibility:</strong> Requires manufacturers to establish and fund take-back programs</li>
+                            <li><strong>Free Recycling:</strong> Mandates free drop-off for covered electronic devices for all California residents</li>
+                            <li><strong>Data Security:</strong> Requires recyclers to provide data destruction services or guidance</li>
+                        </ul>
+                        <p><strong>Covered Devices:</strong> Televisions, computer monitors, laptops, tablets, desktop computers, and most display devices containing screens larger than 4 inches diagonally.</p>
+                    </div>
+
+                    <div class="illegal-alert">
+                        <div class="illegal-header">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>Why Throwing Electronics in the Trash is Illegal & Harmful</h3>
+                        </div>
+                        <p>Improper e-waste disposal poses serious risks and violates California law:</p>
+                        <ul>
+                            <li><strong>Legal Penalties:</strong> Fines up to $2,500 for individuals and $25,000 for businesses</li>
+                            <li><strong>Toxic Leaching:</strong> Lead, mercury, cadmium, and other heavy metals contaminate soil and groundwater</li>
+                            <li><strong>Fire Hazard:</strong> Lithium-ion batteries can ignite in trash compactors or landfills</li>
+                            <li><strong>Resource Waste:</strong> Valuable materials like gold, silver, copper, and rare earth metals are lost forever</li>
+                            <li><strong>Data Vulnerability:</strong> Personal information remains on devices disposed in regular trash</li>
+                            <li><strong>Environmental Justice:</strong> Much e-waste is illegally exported to developing countries with poor safety standards</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="locations">
+                    <h2>Certified E-Waste Drop-off Locations in San Diego County</h2>
+                    <p>San Diego County offers numerous certified e-waste recycling locations. These facilities meet California's strict standards for environmental protection and data security:</p>
+                    
+                    <div class="location-cards">
+                        <div class="location-card">
+                            <div class="location-header">
+                                <div class="location-icon">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                                <h3 class="location-title">El Cajon Recycling Center</h3>
+                            </div>
+                            <p><strong>Primary location for East County residents</strong></p>
+                            <div class="location-details">
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Address:</strong> 1850 Graves Avenue, El Cajon, CA 92021
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Hours:</strong> Mon-Sat 7:00 AM - 5:00 PM (Closed Sunday)
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Phone:</strong> (619) 441-1500
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Notes:</strong> Free for El Cajon residents (ID required). Business waste fees apply.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="location-card">
+                            <div class="location-header">
+                                <div class="location-icon">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <h3 class="location-title">Miramar Recycling Center</h3>
+                            </div>
+                            <p><strong>San Diego's largest e-waste processing facility</strong></p>
+                            <div class="location-details">
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Address:</strong> 5160 Convoy Street, San Diego, CA 92111
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Hours:</strong> Daily 7:00 AM - 4:30 PM
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Phone:</strong> (858) 492-7100
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Notes:</strong> Free for all San Diego County residents. Business appointments required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="location-card">
+                            <div class="location-header">
+                                <div class="location-icon">
+                                    <i class="fas fa-store"></i>
+                                </div>
+                                <h3 class="location-title">Best Buy El Cajon</h3>
+                            </div>
+                            <p><strong>Retail take-back program (convenient option)</strong></p>
+                            <div class="location-details">
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Address:</strong> 550 Fletcher Parkway, El Cajon, CA 92020
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Hours:</strong> Mon-Sat 10:00 AM - 9:00 PM, Sun 11:00 AM - 8:00 PM
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Phone:</strong> (619) 579-2300
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Notes:</strong> Free recycling for most items. Limit 3 items per household per day. Fees for TVs/monitors over specific sizes.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Additional San Diego County Locations</h3>
+                    <ul>
+                        <li><strong>Staples (Multiple Locations):</strong> Free recycling for small electronics and accessories</li>
+                        <li><strong>Goodwill Industries:</strong> Partners with Dell Reconnect program for computer recycling</li>
+                        <li><strong>Office Depot (El Cajon):</strong> Technology recycling program with fees for some items</li>
+                        <li><strong>City of San Diego Environmental Services:</strong> Periodic e-waste collection events</li>
+                        <li><strong>SDSU E-Waste Collection Center:</strong> Open to public on specific days</li>
+                    </ul>
+                </section>
+
+                <section id="process">
+                    <h2>What Happens to Your Recycled Electronics</h2>
+                    
+                    <div class="process-section">
+                        <div class="process-header">
+                            <i class="fas fa-cogs"></i>
+                            <h3>The E-Waste Recycling Process in San Diego County</h3>
+                        </div>
+                        <p>When you drop off electronics at certified facilities, they undergo a meticulous process to maximize material recovery and ensure environmental protection:</p>
+                        
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <h4>Data Destruction</h4>
+                                <p>Certified data wiping or physical destruction of storage devices following NIST 800-88 standards</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <h4>Manual Disassembly</h4>
+                                <p>Skilled technicians separate components: batteries, circuit boards, plastics, metals, glass</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <h4>Component Recovery</h4>
+                                <p>Valuable materials extracted: gold from connectors, copper from wiring, rare earth metals</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <h4>Material Processing</h4>
+                                <p>Plastics shredded for reuse, metals smelted, glass cleaned for new screen manufacturing</p>
+                            </div>
+                        </div>
+                        
+                        <p><strong>San Diego's Success:</strong> Local facilities recover approximately 95% of materials from electronics, with less than 5% sent to specialized hazardous waste facilities for safe disposal.</p>
+                    </div>
+                </section>
+
+                <section id="items">
+                    <h2>Accepted & Prohibited E-Waste Items</h2>
+                    
+                    <div class="items-grid">
+                        <div class="item-card">
+                            <div class="item-icon">
+                                <i class="fas fa-tv"></i>
+                            </div>
+                            <div class="item-name">Televisions</div>
+                            <p>All types: CRT, LCD, LED, plasma. Free recycling at certified centers.</p>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <div class="item-name">Computers</div>
+                            <p>Desktops, laptops, tablets, servers. Remove personal data first.</p>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="item-name">Mobile Devices</div>
+                            <p>Cell phones, smartphones, tablets. Consider donation if functional.</p>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-icon">
+                                <i class="fas fa-print"></i>
+                            </div>
+                            <div class="item-name">Peripherals</div>
+                            <p>Printers, keyboards, mice, cables. Often accepted for free.</p>
+                        </div>
+                    </div>
+
+                    <h3>Prohibited or Special Handling Items</h3>
+                    <ul>
+                        <li><strong>Household appliances:</strong> Refrigerators, microwaves, air conditioners (different recycling stream)</li>
+                        <li><strong>Hazardous components:</strong> Lithium-ion batteries over 300 watt-hours (special handling)</li>
+                        <li><strong>Business equipment:</strong> Large servers, medical equipment (may require special appointment)</li>
+                        <li><strong>Contaminated items:</strong> Electronics damaged by water, fire, or biological hazards</li>
+                        <li><strong>Non-electronic items:</strong> Furniture, media (CDs/DVDs), manuals (recycle separately)</li>
+                    </ul>
+
+                    <div class="service-note">
+                        <div class="service-header">
+                            <i class="fas fa-home"></i>
+                            <h3>For Large-Scale or Estate Cleanouts</h3>
+                        </div>
+                        <p>When dealing with large quantities of electronics from estate cleanouts, office clearances, or major household cleanouts, professional services can ensure proper handling. <a href="https://krakenjunkremovers.com/" target="_blank" style="color: var(--accent); font-weight: 600;">Estate cleanouts</a> services in San Diego County understand local e-waste regulations and can coordinate proper recycling for electronics alongside other items.</p>
+                    </div>
+
+                    <p>For additional information on green waste and yard debris disposal in the El Cajon area, explore our comprehensive guide on <a href="https://hypicmodapkk.github.io/el-jprden-guide/" target="_blank" style="color: var(--primary); font-weight: 600;">Github Repositary</a> which covers local regulations and disposal options.</p>
+                    
+                    <p>Need immediate assistance with e-waste disposal? To learn about professional services and <a href="https://share.google/nQVEZMlN0WkdEmzYF" target="_blank" style="color: var(--primary); font-weight: 600;">Finf US</a> for certified e-waste recycling in San Diego County.</p>
+                </section>
+
+                <section id="conclusion">
+                    <h2>San Diego County's E-Waste Recycling Success</h2>
+                    <p>San Diego County has become a national leader in e-waste recycling, processing over 25 million pounds annually through its network of certified facilities. The county's success stems from strong public-private partnerships, clear regulatory frameworks, and engaged residents who understand the importance of proper electronics disposal. By utilizing the resources outlined in this guide, El Cajon and San Diego County residents can continue this environmental leadership while protecting themselves from legal liability and contributing to a circular economy.</p>
+                    <p style="margin-top: 1.5rem; font-style: italic; padding: 1.5rem; background: var(--light); border-radius: var(--border-radius);">Remember: When in doubt about e-waste disposal in San Diego County, contact the San Diego County Department of Environmental Health at (858) 505-6700 or visit WasteFreeSD.org for the most current information on certified recycling locations and regulations.</p>
+                </section>
+            </main>
+
+            <aside class="sidebar">
+                <div class="resources">
+                    <h3>Quick Resource Links</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <a href="https://hypicmodapkk.github.io/el-jprden-guide/" target="_blank">
+                                <div class="resource-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <span>El Cajon Green Guide (Github Repositary)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://krakenjunkremovers.com/" target="_blank">
+                                <div class="resource-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <span>Professional Estate Cleanouts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://share.google/nQVEZMlN0WkdEmzYF" target="_blank">
+                                <div class="resource-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <span>Finf US - Local Services</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <div class="resource-icon">
+                                    <i class="fas fa-search-location"></i>
+                                </div>
+                                <span>SD County E-Waste Map</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <div class="resource-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <span>Printable Recycling Guide</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="resources">
+                    <h3>Important Contacts</h3>
+                    <ul style="list-style: none; margin-left: 0;">
+                        <li style="margin-bottom: 1.2rem; padding-left: 1.8rem; position: relative;">
+                            <i class="fas fa-phone" style="color: var(--primary); position: absolute; left: 0;"></i>
+                            <strong>San Diego County DEH:</strong> (858) 505-6700
+                        </li>
+                        <li style="margin-bottom: 1.2rem; padding-left: 1.8rem; position: relative;">
+                            <i class="fas fa-phone" style="color: var(--primary); position: absolute; left: 0;"></i>
+                            <strong>El Cajon Environmental Services:</strong> (619) 441-1500
+                        </li>
+                        <li style="margin-bottom: 1.2rem; padding-left: 1.8rem; position: relative;">
+                            <i class="fas fa-phone" style="color: var(--danger); position: absolute; left: 0;"></i>
+                            <strong>Illegal Dumping Hotline:</strong> 1-877-NO-DUMPING
+                        </li>
+                        <li style="padding-left: 1.8rem; position: relative;">
+                            <i class="fas fa-phone" style="color: var(--primary); position: absolute; left: 0;"></i>
+                            <strong>CalRecycle E-Waste Info:</strong> 1-800-RECYCLE
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="resources">
+                    <h3>Data Security Tips</h3>
+                    <ul style="list-style: none; margin-left: 0;">
+                        <li style="margin-bottom: 1.2rem; padding-left: 1.8rem; position: relative;">
+                            <i class="fas fa-shield-alt" style="color: var(--success); position: absolute; left: 0;"></i>
+                            <strong>Remove storage:</strong> Take out hard drives if possible
+                        </li>
+                        <li style="margin-bottom: 1.2rem; padding-left: 1.8rem; position: relative;">
+                            <i class="fas fa-shield-alt" style="color: var(--success); position: absolute; left: 0;"></i>
+                            <strong>Factory reset:</strong> Perform before recycling mobile devices
+                        </li>
+                        <li style="margin-bottom: 1.2rem; padding-left: 1.8rem; position: relative;">
+                            <i class="fas fa-shield-alt" style="color: var(--success); position: absolute; left: 0;"></i>
+                            <strong>Get certificate:</strong> Request data destruction certificate from recycler
+                        </li>
+                        <li style="padding-left: 1.8rem; position: relative;">
+                            <i class="fas fa-shield-alt" style="color: var(--success); position: absolute; left: 0;"></i>
+                            <strong>Backup first:</strong> Save important data before recycling
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="resources">
+                    <h3>Recycling Rates by Material</h3>
+                    <div style="margin-top: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span>Metals (Gold, Copper)</span>
+                            <span style="font-weight: 600; color: var(--accent);">95-98%</span>
+                        </div>
+                        <div style="height: 8px; background: var(--gray-light); border-radius: 4px; margin-bottom: 1rem;">
+                            <div style="width: 97%; height: 100%; background: var(--primary); border-radius: 4px;"></div>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span>Plastics</span>
+                            <span style="font-weight: 600; color: var(--accent);">70-85%</span>
+                        </div>
+                        <div style="height: 8px; background: var(--gray-light); border-radius: 4px; margin-bottom: 1rem;">
+                            <div style="width: 78%; height: 100%; background: var(--primary); border-radius: 4px;"></div>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span>Glass (Screens)</span>
+                            <span style="font-weight: 600; color: var(--accent);">90-95%</span>
+                        </div>
+                        <div style="height: 8px; background: var(--gray-light); border-radius: 4px;">
+                            <div style="width: 93%; height: 100%; background: var(--primary); border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: var(--gray);">Percentage of material recovered from electronics in SD County facilities</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>San Diego E-Waste Guide</h4>
+                    <p style="color: #bdc3c7; margin-bottom: 1.5rem;">A definitive local resource for El Cajon and San Diego County residents on electronics disposal laws, certified drop-off locations, and the e-waste recycling process.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Guide Sections</h4>
+                    <ul class="footer-links">
+                        <li><a href="#laws">California Laws</a></li>
+                        <li><a href="#locations">Drop-off Locations</a></li>
+                        <li><a href="#process">Recycling Process</a></li>
+                        <li><a href="#items">Accepted Items</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>External Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://hypicmodapkk.github.io/el-jprden-guide/" target="_blank">El Cajon Green Guide</a></li>
+                        <li><a href="https://krakenjunkremovers.com/" target="_blank">Estate Cleanout Services</a></li>
+                        <li><a href="https://share.google/nQVEZMlN0WkdEmzYF" target="_blank">Find Local Services</a></li>
+                        <li><a href="#">CalRecycle Official Site</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 San Diego County E-Waste Recycling Guide. This is an educational resource. Always verify current regulations with San Diego County Department of Environmental Health and CalRecycle.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.8rem;">California's Electronic Waste Recycling Act has diverted over 2 billion pounds of e-waste from landfills since 2005.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
